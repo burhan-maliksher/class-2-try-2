@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.4.1
         with:
-          version: 16.13.0
+          version: 12
  
       - name: GitHub Action for Yarn
   # You may pin to the exact commit or the version.
@@ -36,6 +36,9 @@ jobs:
         with:
     # Yarn command
           cmd: install
+      
+      - name: creating build
+        run: yarn build
           
           
       - name: installing surge
